@@ -1,42 +1,35 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Header = () => {
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
-      <Toolbar>
+    <AppBar
+      position="static"
+      elevation={1} // Subtle shadow for depth
+      sx={{
+        backgroundColor: "#f5f5f5", // Light background color
+        color: "#333", // Dark text color for contrast
+      }}
+    >
+      <Toolbar
+        sx={{
+          minHeight: "64px", // Increase navbar height
+          padding: "0 24px", // Add horizontal padding
+        }}
+      >
         {/* Logo Text */}
-        <Typography variant="h6" sx={{ flexGrow: 1, fontSize: "1rem", fontWeight: "bold" }}>
-        PicSearch
-        </Typography>
-
-        {/* Explore Button */}
-        <Button color="inherit" sx={{ textTransform: "none", fontSize: "0.9rem" }}>
-          Explore
-        </Button>
-
-        {/* License Button */}
-        <Button color="inherit" sx={{ textTransform: "none", fontSize: "0.9rem", marginLeft: "10px" }}>
-          License
-        </Button>
-
-        {/* Upload Button */}
-        <Button
-          variant="outlined"
-          color="primary"
+        <Typography
+          variant="h6"
           sx={{
-            textTransform: "none",
-            fontSize: "0.9rem",
-            marginLeft: "10px",
-            borderColor: "#1976d2", // Customize border color
-            color: "#1976d2", // Customize text color
-            "&:hover": {
-              backgroundColor: "#e3f2fd", // Light blue hover background
-            },
+            flexGrow: 1,
+            fontSize: "1.5rem", // Slightly larger font size
+            fontWeight: "bold",
+            color: "#1976d2", // Custom logo color
+            fontFamily: "'Poppins', sans-serif", // Use a modern font
           }}
         >
-          Upload
-        </Button>
+          PicSearch
+        </Typography>
       </Toolbar>
     </AppBar>
   );

@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <MainContent bgImage="/maincontentimg.webp" />
+      <MainContent bgImage="/image1.jpeg" />
 
       <div style={{ padding: "20px" }}>
         <SearchBar onSearch={handleSearch} />
